@@ -1345,6 +1345,27 @@ html, body { background: var(--stage) !important; }
 .cv-title .cv-on { background-image: linear-gradient(100deg, #B10A6E 0%, #E5456F 70%, #F2A71B 120%); }
 .cv-title .on-han { top: -10px; right: 0; }
 @media (max-height: 720px) { .cv-title .on-han { top: -8px; right: 2px; } }
+/* 계좌 연락처 줄 · 기부금 영수증 담당자 · 마지막 장 문의 */
+.acct-row2 { border-top: 0 !important; padding-top: 0 !important; margin-top: -4px; }
+.rcpt { margin-top: 14px; padding: 14px; border-radius: 16px; background: var(--paper); border: 1px solid rgba(177, 10, 110, .14); display: grid; gap: 8px; }
+.rcpt-h { display: grid; grid-template-columns: 36px 1fr; gap: 10px; align-items: center; margin-bottom: 2px; }
+.rcpt-h .di { width: 36px; height: 36px; font-size: 19px; background: #FFF4DA; color: #C97E05; }
+.rcpt-h small { display: block; font-size: 12px; font-weight: 700; color: var(--ink-2); line-height: 1.3; }
+.rcpt-h b { font-size: 15.5px; font-weight: 800; color: var(--ink); }
+.rcpt-row { display: grid; grid-template-columns: 18px 1fr auto; gap: 7px; align-items: center; width: 100%; padding: 10px 9px; border-radius: 12px; border: 1px solid var(--line); background: var(--blush); text-align: left; transition: border-color .2s, background .2s; }
+.rcpt-row > .ic { width: 19px; height: 19px; color: var(--brand); }
+.rcpt-row .rv { min-width: 0; white-space: normal; overflow-wrap: normal; word-break: normal; line-height: 1.35; font-size: 13.5px; font-weight: 700; color: var(--ink); letter-spacing: -.01em; }
+.rcpt-row .rc { display: inline-flex; align-items: center; gap: 3px; padding: 4px 9px; border-radius: 99px; background: var(--brand); color: #fff; font-size: 11.5px; font-weight: 700; }
+.rcpt-row .rc .ic { width: 12px; height: 12px; }
+.rcpt-row .rc em { font-style: normal; }
+.rcpt-row.done { border-color: var(--brand); background: #fff; }
+.rcpt-row.done .rc { background: #2E9E6A; }
+.contact2 { padding: 14px 16px; }
+.contact2 .ct-h { display: block; font-size: 13px; font-weight: 800; margin-bottom: 6px; }
+.contact2 ul { display: grid; gap: 8px; }
+.contact2 li { display: grid; gap: 1px; padding-left: 12px; position: relative; font-size: 13.5px; line-height: 1.45; }
+.contact2 li::before { content: ""; position: absolute; left: 0; top: .6em; width: 4px; height: 4px; border-radius: 50%; background: currentColor; opacity: .8; }
+.contact2 a { color: inherit; font-weight: 700; text-decoration: none; font-variant-numeric: tabular-nums; }
 </style>
 </head>
 <body>
@@ -1381,7 +1402,7 @@ html, body { background: var(--stage) !important; }
 <symbol id="i-bank" viewBox="0 0 24 24"><path class="ia" d="M3 9.5 12 4l9 5.5z"/><path d="M3 9.5 12 4l9 5.5zM5.5 10.5v7.5M9.8 10.5v7.5M14.2 10.5v7.5M18.5 10.5v7.5M3.5 20.5h17"/></symbol>
 <symbol id="i-copy" viewBox="0 0 24 24"><rect class="ia" x="8.5" y="8.5" width="11" height="11" rx="2.4"/><rect x="8.5" y="8.5" width="11" height="11" rx="2.4"/><path d="M15.5 8.5V6.2a2 2 0 0 0-2-2H6.2a2 2 0 0 0-2 2v7.3a2 2 0 0 0 2 2h2.3"/></symbol>
 <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
-<symbol id="i-menu" viewBox="0 0 24 24"><g style="fill:currentColor;stroke:none"><circle cx="6" cy="6" r="1.7"/><circle cx="12" cy="6" r="1.7"/><circle cx="18" cy="6" r="1.7"/><circle cx="6" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="18" cy="12" r="1.7"/><circle cx="6" cy="18" r="1.7"/><circle cx="12" cy="18" r="1.7"/><circle cx="18" cy="18" r="1.7"/></g></symbol>
+<symbol id="i-phone" viewBox="0 0 24 24"><path d="M5.2 3.5h3.3l1.6 4.1-2.1 1.3a11.2 11.2 0 0 0 5.1 5.1l1.3-2.1 4.1 1.6v3.3a2 2 0 0 1-2.2 2A16.3 16.3 0 0 1 3.2 5.7a2 2 0 0 1 2-2.2z"/></symbol><symbol id="i-menu" viewBox="0 0 24 24"><g style="fill:currentColor;stroke:none"><circle cx="6" cy="6" r="1.7"/><circle cx="12" cy="6" r="1.7"/><circle cx="18" cy="6" r="1.7"/><circle cx="6" cy="12" r="1.7"/><circle cx="12" cy="12" r="1.7"/><circle cx="18" cy="12" r="1.7"/><circle cx="6" cy="18" r="1.7"/><circle cx="12" cy="18" r="1.7"/><circle cx="18" cy="18" r="1.7"/></g></symbol>
 <symbol id="g-on" viewBox="0 0 944 924"><path d="M52 90C112 116 187 162 223 196L293 97C255 64 178 23 119 0ZM0 360C60 385 134 428 170 461L239 361C201 329 124 290 65 269ZM17 853 125 924C176 826 229 710 273 603L179 531C128 649 63 776 17 853ZM350 39V448H844V39ZM232 803V906H944V803H882V500H315V803ZM422 803V600H478V803ZM566 803V600H623V803ZM712 803V600H769V803ZM562 135C553 198 520 262 458 295V129H730V359H458V298C474 311 495 335 505 350C540 330 568 302 590 269C621 297 651 327 669 348L724 298C702 274 659 236 623 206C631 186 637 165 641 144Z"/></symbol>
 </defs>
 </svg>
@@ -1741,7 +1762,8 @@ html, body { background: var(--stage) !important; }
       <div class="acct tilt in" style="--i:2" data-tilt="3">
         <div class="acct-head"><span class="di"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg></span><div><b>마음 보내는 곳</b><small>계좌번호 복사 버튼으로 간편하게 보내실 수 있습니다</small></div></div>
         <div class="acct-no"><small>국민은행</small><span id="acctNo">217002-04-140252</span></div>
-        <div class="acct-row"><span>예금주</span><b>양아영 비서 <a class="acct-tel" href="tel:01035987323">(010-3598-7323)</a></b></div>
+        <div class="acct-row"><span>예금주</span><b>양아영 차장(비서)</b></div>
+        <div class="acct-row acct-row2"><span>연락처</span><b><a class="acct-tel" href="tel:01035987323">010-3598-7323</a></b></div>
         <button type="button" class="copy" id="copyBtn" data-nudge><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><span id="copyTxt">계좌번호 복사</span></button>
       </div>
       <div class="dform in" style="--i:3" id="dform" role="group" aria-labelledby="dfTitle">
@@ -1772,6 +1794,11 @@ html, body { background: var(--stage) !important; }
           <b>따뜻한 마음, 잘 받았습니다.</b>
           <p id="dfDoneTxt">확인 후 남겨주신 연락처로 감사 인사를 전해드리겠습니다.</p>
           <button type="button" class="df-again" id="dfAgain">다른 정보 한 번 더 남기기</button>
+        </div>
+        <div class="rcpt">
+          <div class="rcpt-h"><span class="di"><svg class="ic" aria-hidden="true"><use href="#i-doc"/></svg></span><div><small>기부금 영수증 담당자</small><b>곽재광 담당자</b></div></div>
+          <button type="button" class="rcpt-row" data-copy="jaekwang.kwack@lotvacuum.com" data-msg="메일 주소를 복사했습니다"><svg class="ic" aria-hidden="true"><use href="#i-mail"/></svg><span class="rv">jaekwang.kwack<wbr>@lotvacuum.com</span><span class="rc"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><em>복사</em></span></button>
+          <button type="button" class="rcpt-row" data-copy="010-2332-9004" data-msg="연락처를 복사했습니다"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg><span class="rv">010-2332-9004</span><span class="rc"><svg class="ic" aria-hidden="true"><use href="#i-copy"/></svg><em>복사</em></span></button>
         </div>
       </div>
       <div class="mini-steps in" style="--i:4">
@@ -1846,7 +1873,7 @@ html, body { background: var(--stage) !important; }
       <p class="thanks in" style="--i:1" data-d="-10">THANKS<br>A <em>LOT</em></p>
       <p class="end-sub in" style="--i:2">우리 곁에서 온 세상까지<br>따뜻함이 퍼질 수 있도록<br><b class="end-em">온기를 나눠 주셔서 감사합니다.</b></p>
       <p class="end-note in" style="--i:2">여러분이 나눈 온기는 2027년에도 더 멀리 이어집니다.</p>
-      <p class="contact in" style="--i:3">문의 · 엘오티베큠<br>양아영 비서 <a class="acct-tel" href="tel:01035987323">(010-3598-7323)</a></p>
+      <div class="contact contact2 in" style="--i:3"><b class="ct-h">문의</b><ul><li><span>양아영 차장(비서)</span><a href="tel:01035987323">010-3598-7323</a></li><li><span>기부금 영수증 : 곽재광 담당자</span><a href="tel:01023329004">010-2332-9004</a></li></ul></div>
       <div class="end-actions in" style="--i:4">
         <button type="button" class="btn solid" data-go="13" data-nudge><svg class="ic" aria-hidden="true"><use href="#i-hand-heart"/></svg>손길 보내는 방법</button>
         <button type="button" class="btn" data-go="0"><svg class="ic" aria-hidden="true"><use href="#i-home-first"/></svg>처음부터 보기</button>
@@ -2671,6 +2698,27 @@ html, body { background: var(--stage) !important; }
     box.querySelectorAll('input[type="text"],input[type="tel"],input[type="email"]').forEach(function (e) { e.value = ''; });
     $('fFile').value = ''; $('fFile').dispatchEvent(new Event('change')); $('fAgree').checked = false;
     $('dfDone').hidden = true; $('dfBody').hidden = false;
+  });
+})();
+</script>
+<script>
+/* 기부금 영수증 담당자: 메일·전화 복사 */
+(function () {
+  function copy(t) {
+    if (navigator.clipboard && navigator.clipboard.writeText) return navigator.clipboard.writeText(t);
+    return new Promise(function (res, rej) {
+      var a = document.createElement('textarea'); a.value = t; a.setAttribute('readonly', ''); a.style.position = 'fixed'; a.style.opacity = '0';
+      document.body.appendChild(a); a.select(); try { document.execCommand('copy') ? res() : rej(); } catch (e) { rej(e); } document.body.removeChild(a);
+    });
+  }
+  document.querySelectorAll('.rcpt-row').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var em = b.querySelector('.rc em');
+      copy(b.getAttribute('data-copy')).then(function () {
+        b.classList.add('done'); em.textContent = '복사됨';
+        setTimeout(function () { b.classList.remove('done'); em.textContent = '복사'; }, 1800);
+      }, function () { em.textContent = '길게 눌러 복사'; });
+    });
   });
 })();
 </script>
