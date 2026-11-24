@@ -1338,6 +1338,13 @@ html, body { background: var(--stage) !important; }
 .slide.active .korea circle { animation: ksGlow 2.6s ease-in-out 1.6s infinite; }
 @keyframes ksGlow { 0%, 100% { fill: #E0930B; } 50% { fill: #C2187F; } }
 .gdots { opacity: .7; }
+/* 모바일(삼성 인터넷·사파리) 그라디언트 글자 사라짐 대응: 글자마다 따로 그라디언트 */
+.cv-title { position: relative; background: none !important; color: #8E0858; -webkit-text-fill-color: currentColor; }
+.cv-title .cv-lot, .cv-title .cv-on { font-size: inherit; font-weight: inherit; margin-left: 0; display: inline-block; position: static; -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent; }
+.cv-title .cv-lot { background-image: linear-gradient(100deg, #7A0649 0%, #A10865 100%); }
+.cv-title .cv-on { background-image: linear-gradient(100deg, #B10A6E 0%, #E5456F 70%, #F2A71B 120%); }
+.cv-title .on-han { top: -10px; right: 0; }
+@media (max-height: 720px) { .cv-title .on-han { top: -8px; right: 2px; } }
 </style>
 </head>
 <body>
@@ -1411,7 +1418,7 @@ html, body { background: var(--stage) !important; }
       </div>
       <div class="cover-head in" style="--i:1">
         <p class="cv-ey">엘오티베큠 나눔 안내</p>
-        <p class="cv-title">LOT <span class="cv-on">On<i class="on-han" aria-label="온(溫)">溫</i></span></p>
+        <p class="cv-title"><span class="cv-lot">LOT</span> <span class="cv-on">On</span><i class="on-han" aria-label="온(溫)">溫</i></p>
       </div>
       <p class="cover-sub in" style="--i:2">우리 곁에서 온 세상까지,<br>나눔의 온기를 나눕니다.</p>
       <p class="cover-desc in" style="--i:2">함께해 주신 마음이 어디에서 어떻게 따뜻함이 되었는지, 모바일로 전해드립니다.</p>
