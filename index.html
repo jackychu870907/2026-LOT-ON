@@ -1839,7 +1839,7 @@ html, body { background: var(--stage) !important; }
       <p class="thanks in" style="--i:1" data-d="-10">THANKS<br>A <em>LOT</em></p>
       <p class="end-sub in" style="--i:2">우리 곁에서 온 세상까지<br>따뜻함이 퍼질 수 있도록<br><b class="end-em">온기를 나눠 주셔서 감사합니다.</b></p>
       <p class="end-note in" style="--i:2">여러분이 나눈 온기는 2027년에도 더 멀리 이어집니다.</p>
-      <p class="contact in" style="--i:3">문의 · 엘오티베큠 HR팀<br>[담당자 · 연락처 입력]</p>
+      <p class="contact in" style="--i:3">문의 · 엘오티베큠<br>양아영 비서 <a class="acct-tel" href="tel:01035987323">(010-3598-7323)</a></p>
       <div class="end-actions in" style="--i:4">
         <button type="button" class="btn solid" data-go="13" data-nudge><svg class="ic" aria-hidden="true"><use href="#i-hand-heart"/></svg>손길 보내는 방법</button>
         <button type="button" class="btn" data-go="0"><svg class="ic" aria-hidden="true"><use href="#i-home-first"/></svg>처음부터 보기</button>
@@ -2657,7 +2657,7 @@ html, body { background: var(--stage) !important; }
         .then(function (r) { return r.json(); })
         .then(function (j) { if (!j || !j.ok) throw new Error((j && j.error) || 'fail'); done('확인 후 남겨주신 연락처로 감사 인사를 전해드리겠습니다.'); });
     }).catch(function () {
-      err.textContent = '전송하지 못했습니다. 잠시 후 다시 시도해 주세요. 계속 안 되면 HR팀으로 연락 부탁드립니다.';
+      err.textContent = '전송하지 못했습니다. 잠시 후 다시 시도해 주세요. 계속 안 되면 양아영 비서(010-3598-7323)에게 연락 부탁드립니다.';
     }).then(function () { btn.disabled = false; btn.querySelector('span').textContent = '마음 전한 정보 보내기'; });
   });
   $('dfAgain').addEventListener('click', function () {
